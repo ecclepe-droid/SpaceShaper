@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://04mik1vanen4"]
+
+[ext_resource type="Script" uid="uid://coyo3kvaxtosk" path="res://Scenes/Entities/player.gd" id="1_4dpyx"]
+[ext_resource type="Texture2D" uid="uid://bf5phoxj1yg08" path="res://PlayerArt.png" id="2_4dpyx"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4dpyx"]
+normal = Vector2(-0.6851008, -0.7284483)
+distance = -635.9418
+
+[node name="Level" type="Node2D" unique_id=2057464644]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=885818163]
+position = Vector2(328, 152)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_4dpyx")
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player" unique_id=1167695071]
+texture = ExtResource("2_4dpyx")
+region_enabled = true
+region_rect = Rect2(121, 63, 71, 118)
+
+[node name="PlayerCollisionShape" type="CollisionPolygon2D" parent="Player" unique_id=861648225]
+polygon = PackedVector2Array(0, -71, -40, 58, 37, 58)
+
+[node name="Platforms" type="Node2D" parent="." unique_id=482068417]
+
+[node name="Ground" type="StaticBody2D" parent="Platforms" unique_id=1610434837]
+
+[node name="GroundCollisionShape" type="CollisionShape2D" parent="Platforms/Ground" unique_id=65500479]
+shape = SubResource("WorldBoundaryShape2D_4dpyx")
