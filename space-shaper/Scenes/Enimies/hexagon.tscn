@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cyui5eyn72ihm"]
+
+[ext_resource type="Script" uid="uid://dvluthfbtisok" path="res://Scripts/Enimies/hexagon.gd" id="1_wq7t5"]
+[ext_resource type="Texture2D" uid="uid://b0cwgn7cvo0im" path="res://Resources/Entities/Enemies/enemy sprites.png" id="2_wq7t5"]
+
+[node name="Hexagon" type="CharacterBody2D" unique_id=1982490247]
+script = ExtResource("1_wq7t5")
+
+[node name="HexagonSprite" type="Sprite2D" parent="." unique_id=850474422]
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("2_wq7t5")
+region_enabled = true
+region_rect = Rect2(453, 462, 300, 266)
+
+[node name="HexagonCollisions" type="CollisionPolygon2D" parent="." unique_id=761600821]
+polygon = PackedVector2Array(68, 0, 34, 58, -34, 58, -68, 0, -34, -59, 34, -59)

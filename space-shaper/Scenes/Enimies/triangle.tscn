@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dl088nknewywy"]
+
+[ext_resource type="Texture2D" uid="uid://b0cwgn7cvo0im" path="res://Resources/Entities/Enemies/enemy sprites.png" id="1_tuae4"]
+[ext_resource type="Script" uid="uid://cl8fcdqfa1wa4" path="res://Scripts/Enimies/triangle.gd" id="1_vy7s3"]
+
+[node name="Triangle" type="CharacterBody2D" unique_id=552354916]
+script = ExtResource("1_vy7s3")
+
+[node name="TriangleSprite" type="Sprite2D" parent="." unique_id=447106196]
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("1_tuae4")
+region_enabled = true
+region_rect = Rect2(450.027, 62.98439, 298.33615, 276.77502)
+
+[node name="TriangleCollisions" type="CollisionPolygon2D" parent="." unique_id=304919531]
+polygon = PackedVector2Array(0, -63, 69, 62, -69, 62)

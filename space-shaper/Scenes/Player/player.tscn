@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://drdfrx230w8nc"]
+
+[ext_resource type="Script" uid="uid://cve8snc06cfrt" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
+[ext_resource type="Texture2D" uid="uid://dovngjevh4e1n" path="res://Resources/Entities/Player/PlayerArtRevised.png" id="2_a3d8c"]
+[ext_resource type="PackedScene" uid="uid://cci153kh6wxlt" path="res://Scenes/Player/player_ui.tscn" id="3_xpcdj"]
+
+[sub_resource type="Animation" id="Animation_xpcdj"]
+resource_name = "damage_fade"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mtuoh"]
+_data = {
+&"damage_fade": SubResource("Animation_xpcdj")
+}
+
+[node name="Player" type="CharacterBody2D" unique_id=1878138704]
+script = ExtResource("1_a3d8c")
+
+[node name="PlayerHitbox" type="CollisionPolygon2D" parent="." unique_id=1957000782]
+position = Vector2(-38, -11)
+polygon = PackedVector2Array(99, 11, -20, 47, -20, -25)
+
+[node name="flame" type="Sprite2D" parent="." unique_id=1770905053]
+position = Vector2(-139, -33)
+texture = ExtResource("2_a3d8c")
+centered = false
+region_enabled = true
+region_rect = Rect2(411.73154, 372.17084, 86.85382, 64.89307)
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1586694823]
+texture = ExtResource("2_a3d8c")
+region_enabled = true
+region_rect = Rect2(940.00073, 120.000046, 121, 73.000046)
+
+[node name="PlayerCamera" type="Camera2D" parent="." unique_id=7339318]
+zoom = Vector2(0.3, 0.3)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1124683435]
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="." unique_id=236112525]
+one_shot = true
+
+[node name="InvincibilityTimer" type="Timer" parent="." unique_id=702005697]
+one_shot = true
+
+[node name="player_ui" parent="." unique_id=258393080 instance=ExtResource("3_xpcdj")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=854443161]
+libraries/ = SubResource("AnimationLibrary_mtuoh")
+
+[connection signal="timeout" from="ShootTimer" to="." method="shoot"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://yxw62lnwnuxx"]
+
+[ext_resource type="Texture2D" uid="uid://b0cwgn7cvo0im" path="res://Resources/Entities/Enemies/enemy sprites.png" id="1_55cp6"]
+[ext_resource type="Script" uid="uid://dgvhegckp0cq5" path="res://Scripts/Enimies/octagon.gd" id="1_232mh"]
+
+[node name="Octagon" type="CharacterBody2D" unique_id=1882861433]
+script = ExtResource("1_232mh")
+
+[node name="OctagonSprite" type="Sprite2D" parent="." unique_id=1935115275]
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("1_55cp6")
+region_enabled = true
+region_rect = Rect2(56.285675, 764.36975, 300.30014, 299.17126)
+
+[node name="OctagonCollisions" type="CollisionPolygon2D" parent="." unique_id=324790063]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(68, -28, 68, 28, 28, 68, -29, 68, -68, 28, -68, -28, -28, -68, 28, -68)

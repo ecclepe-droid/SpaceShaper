@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dgdxb7igvv5r0"]
+
+[ext_resource type="Script" uid="uid://baoxpx8q0tr7u" path="res://Scripts/Enimies/enemy_bullet.gd" id="1_tynsy"]
+[ext_resource type="Texture2D" uid="uid://j3tury3yemcf" path="res://Resources/Entities/Projectiles/enemy_bullet.png" id="2_y7hh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q46w"]
+size = Vector2(14.000002, 5.9000006)
+
+[node name="EnemyBullet" type="Area2D" unique_id=1990817945]
+script = ExtResource("1_tynsy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=364365588]
+position = Vector2(0, 0.14999995)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_1q46w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1508458917]
+texture = ExtResource("2_y7hh5")
+region_enabled = true
+region_rect = Rect2(327.22427, 243.7854, 14.461731, 8.863647)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ddpbfn6u1dbmu"]
+
+[ext_resource type="Script" uid="uid://c0vlsd64v86e8" path="res://Scripts/Levels/ammo_crate.gd" id="1_cncmv"]
+[ext_resource type="Texture2D" uid="uid://cskl8tommqcm3" path="res://icon.svg" id="2_vxvf0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a7jr"]
+size = Vector2(29, 20)
+
+[node name="AmmoCrate" type="StaticBody2D" unique_id=1410633148]
+script = ExtResource("1_cncmv")
+
+[node name="AmmoCrateCollisionShape" type="CollisionShape2D" parent="." unique_id=928391636]
+shape = SubResource("RectangleShape2D_4a7jr")
+
+[node name="AmmoCrateSprite" type="Sprite2D" parent="." unique_id=574284133]
+position = Vector2(1, 1.1920929e-07)
+scale = Vector2(0.25, 0.171875)
+texture = ExtResource("2_vxvf0")

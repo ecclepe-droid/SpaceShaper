@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://6opgv5mdbgnu"]
+
+[ext_resource type="Script" uid="uid://b23sqi6u4cqpy" path="res://Scripts/Ui/loss_screen.gd" id="1_66e68"]
+[ext_resource type="Script" uid="uid://c3ohqwpvfhh2i" path="res://Scripts/Ui/quit_button.gd" id="2_fxsc0"]
+[ext_resource type="Script" uid="uid://dwep0lecttqp6" path="res://Scripts/Ui/retry_button.gd" id="3_a134e"]
+
+[node name="LossScreen" type="Control" unique_id=1376175269]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_66e68")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=409806600]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Loss" type="Label" parent="VBoxContainer" unique_id=1205480883]
+self_modulate = Color(1, 0.39215687, 0.47058824, 1)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "You Have Been Destroyed"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1280605563]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.56
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1176986940]
+self_modulate = Color(0, 1, 0.59607846, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Score: "
+
+[node name="HighScore" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1069716159]
+self_modulate = Color(0, 0.7607843, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "High Score:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=646999128]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=206506229]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+script = ExtResource("2_fxsc0")
+
+[node name="RetryButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1609525350]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Retry"
+script = ExtResource("3_a134e")

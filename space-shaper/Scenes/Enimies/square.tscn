@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c8akrxa8w2tqo"]
+
+[ext_resource type="Script" uid="uid://cv053ntv7g2vw" path="res://Scripts/Enimies/square.gd" id="1_oeyed"]
+[ext_resource type="Texture2D" uid="uid://b0cwgn7cvo0im" path="res://Resources/Entities/Enemies/enemy sprites.png" id="2_oeyed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s50m2"]
+size = Vector2(103, 103)
+
+[node name="Square" type="CharacterBody2D" unique_id=750979572]
+script = ExtResource("1_oeyed")
+
+[node name="SquareSprite" type="Sprite2D" parent="." unique_id=351825783]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_oeyed")
+region_enabled = true
+region_rect = Rect2(50.182007, 52.65587, 308.65552, 308.65546)
+
+[node name="SquareCollisions" type="CollisionShape2D" parent="." unique_id=956459188]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_s50m2")

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c3g6orgq22mnw"]
+
+[ext_resource type="Script" uid="uid://w7qow5q3ydee" path="res://Scenes/Level's/level_1.gd" id="1_3f0x5"]
+[ext_resource type="PackedScene" uid="uid://drdfrx230w8nc" path="res://Scenes/Player/player.tscn" id="1_cv2n7"]
+[ext_resource type="PackedScene" uid="uid://c8akrxa8w2tqo" path="res://Scenes/Enimies/square.tscn" id="4_2ml12"]
+
+[node name="Level-1" type="Node2D" unique_id=611599718]
+script = ExtResource("1_3f0x5")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=801821657]
+wait_time = 5.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1621130154]
+
+[node name="Player" parent="." unique_id=1878138704 instance=ExtResource("1_cv2n7")]
+position = Vector2(579.8074, 330.58533)
+
+[node name="PlayerProjectiles" type="Node2D" parent="." unique_id=53867929]
+
+[node name="Enimies" type="Node2D" parent="." unique_id=1567238101]
+
+[node name="Squares" type="Node2D" parent="Enimies" unique_id=1418640937]
+
+[node name="Square" parent="Enimies/Squares" unique_id=750979572 instance=ExtResource("4_2ml12")]
+
+[node name="Square2" parent="Enimies/Squares" unique_id=747798702 instance=ExtResource("4_2ml12")]
+position = Vector2(600, 0)
+
+[node name="Square3" parent="Enimies/Squares" unique_id=1559973793 instance=ExtResource("4_2ml12")]
+position = Vector2(0, 513)
+
+[node name="Square4" parent="Enimies/Squares" unique_id=1230409351 instance=ExtResource("4_2ml12")]
+position = Vector2(984, 339)
+
+[node name="Square5" parent="Enimies/Squares" unique_id=447933369 instance=ExtResource("4_2ml12")]
+position = Vector2(-968, 808)
+
+[node name="Square6" parent="Enimies/Squares" unique_id=889091737 instance=ExtResource("4_2ml12")]
+position = Vector2(-368, 808)
+
+[node name="Square7" parent="Enimies/Squares" unique_id=126056533 instance=ExtResource("4_2ml12")]
+position = Vector2(-968, 1321)
+
+[node name="Square8" parent="Enimies/Squares" unique_id=86795139 instance=ExtResource("4_2ml12")]
+position = Vector2(16, 1147)
+
+[node name="Square9" parent="Enimies/Squares" unique_id=83206514 instance=ExtResource("4_2ml12")]
+position = Vector2(-1376, -104)
+
+[node name="Square10" parent="Enimies/Squares" unique_id=88750286 instance=ExtResource("4_2ml12")]
+position = Vector2(-776, -104)
+
+[node name="Square11" parent="Enimies/Squares" unique_id=727004018 instance=ExtResource("4_2ml12")]
+position = Vector2(-1376, 409)
+
+[node name="Square12" parent="Enimies/Squares" unique_id=82621435 instance=ExtResource("4_2ml12")]
+position = Vector2(-392, 235)
+
+[node name="Square13" parent="Enimies/Squares" unique_id=1119578437 instance=ExtResource("4_2ml12")]
+position = Vector2(-224, -1008)
+
+[node name="Square14" parent="Enimies/Squares" unique_id=896230543 instance=ExtResource("4_2ml12")]
+position = Vector2(376, -1008)
+
+[node name="Square15" parent="Enimies/Squares" unique_id=2125813102 instance=ExtResource("4_2ml12")]
+position = Vector2(-224, -495)
+
+[node name="Square16" parent="Enimies/Squares" unique_id=2099682689 instance=ExtResource("4_2ml12")]
+position = Vector2(760, -669)
+
+[node name="Square17" parent="Enimies/Squares" unique_id=387570120 instance=ExtResource("4_2ml12")]
+position = Vector2(560, 736)
+
+[node name="Square18" parent="Enimies/Squares" unique_id=303719589 instance=ExtResource("4_2ml12")]
+position = Vector2(1160, 736)
+
+[node name="Square19" parent="Enimies/Squares" unique_id=691867056 instance=ExtResource("4_2ml12")]
+position = Vector2(560, 1249)
+
+[node name="Square20" parent="Enimies/Squares" unique_id=1736569930 instance=ExtResource("4_2ml12")]
+position = Vector2(1544, 1075)
+
+[connection signal="player_shoot" from="Player" to="." method="_on_player_player_shoot"]

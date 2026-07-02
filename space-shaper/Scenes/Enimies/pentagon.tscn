@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c0b4o7g0m5qy5"]
+
+[ext_resource type="Script" uid="uid://b0pkfudsri1lv" path="res://Scripts/Enimies/pentagon.gd" id="1_nrf5w"]
+[ext_resource type="Texture2D" uid="uid://b0cwgn7cvo0im" path="res://Resources/Entities/Enemies/enemy sprites.png" id="2_nrf5w"]
+
+[node name="Pentagon" type="CharacterBody2D" unique_id=642163318]
+script = ExtResource("1_nrf5w")
+
+[node name="PentagonSprite" type="Sprite2D" parent="." unique_id=503245640]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nrf5w")
+region_enabled = true
+region_rect = Rect2(55, 416, 302, 289)
+
+[node name="PentagonColissions" type="CollisionPolygon2D" parent="." unique_id=1533481821]
+polygon = PackedVector2Array(73, -16, 45, 69, -46, 69, -74, -17, 0, -70)

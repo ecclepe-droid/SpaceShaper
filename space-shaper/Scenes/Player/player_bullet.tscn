@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://kbhmrxet0p73"]
+
+[ext_resource type="Script" uid="uid://bsky5c0i1o5uk" path="res://Scripts/Player/player_bullet.gd" id="1_vghvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbwfy"]
+size = Vector2(14.000002, 5.9000006)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vghvw"]
+load_path = "res://.godot/imported/bullet.png-3ac3a935b64f669a5dc85f74a48abc05.ctex"
+
+[node name="PlayerBullet" type="Area2D" unique_id=903960199]
+scale = Vector2(5, 5)
+script = ExtResource("1_vghvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757547889]
+position = Vector2(0, 0.14999995)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_xbwfy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=144791589]
+texture = SubResource("CompressedTexture2D_vghvw")
+region_enabled = true
+region_rect = Rect2(327.22427, 243.7854, 14.461731, 8.863647)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

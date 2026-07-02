@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://cjhbyvw1ekggd"]
+
+[ext_resource type="Script" uid="uid://k1hp7u1j30g" path="res://Scripts/Enimies/changing_shape.gd" id="1_3awkv"]
+[ext_resource type="Texture2D" uid="uid://dnjeiyhijbajm" path="res://Resources/Entities/Enemies/enemy sprites.png" id="1_q7eec"]
+
+[sub_resource type="Animation" id="Animation_q7eec"]
+resource_name = "Circle"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_3awkv"]
+resource_name = "EveryShape"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_4ss6j"]
+resource_name = "Hexagon"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_taw4i"]
+resource_name = "Octagon"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_64gy3"]
+resource_name = "Pentagon"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_mq7mo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_r5a13"]
+resource_name = "Square"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jipm2"]
+resource_name = "Triange"
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TriangleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5g7p1"]
+_data = {
+&"Circle": SubResource("Animation_q7eec"),
+&"EveryShape": SubResource("Animation_3awkv"),
+&"Hexagon": SubResource("Animation_4ss6j"),
+&"Octagon": SubResource("Animation_taw4i"),
+&"Pentagon": SubResource("Animation_64gy3"),
+&"RESET": SubResource("Animation_mq7mo"),
+&"Square": SubResource("Animation_r5a13"),
+&"Triange": SubResource("Animation_jipm2")
+}
+
+[node name="ChangingShape" type="CharacterBody2D" unique_id=1074490665]
+script = ExtResource("1_3awkv")
+
+[node name="TriangleSprite" type="Sprite2D" parent="." unique_id=385360264]
+texture = ExtResource("1_q7eec")
+hframes = 2
+vframes = 3
+frame = 2
+region_rect = Rect2(57.012665, 57.203587, 693.3281, 1006.0697)
+
+[node name="Collisions" type="CollisionPolygon2D" parent="." unique_id=1886456389]
+position = Vector2(0, -11)
+polygon = PackedVector2Array(6, -133, 156, -26, 99, 152, -85, 152, -142, -25)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1418540819]
+libraries/ = SubResource("AnimationLibrary_5g7p1")
