@@ -1,0 +1,28 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1782955054
+icon.svg::CompressedTexture2D::6057612168663482748::1782955011::1782955055::1::::<><><>0<>0<>2fdeff215d10905948b3864b1100e611<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+PlayerArt.png::CompressedTexture2D::2800220261255905739::1782955010::1782955056::1::::<><><>0<>0<>da391ac106e1107261d17effd9446659<>res://.godot/imported/PlayerArt.png-10fbca892c75d97f34992aaf6fada275.ctex::
+::res://Resources/::1782955010
+::res://Resources/Sprites/::1782955010
+black lines.png::CompressedTexture2D::9085080126160034697::1782955010::1782955055::1::::<><><>0<>0<>9a3c03b90284df4277cb5b3bfce3b698<>res://.godot/imported/black lines.png-88dc2805d49c1923890d98ae6a39a174.ctex::
+death screen.png::CompressedTexture2D::7814545304689895586::1782955010::1782955055::1::::<><><>0<>0<>0f4c3b5580151f89ef0e26442456d107<>res://.godot/imported/death screen.png-9e96c9010715b66e6218343dcb01f07e.ctex::
+::res://Resources/Sprites/Entities/::1782955010
+::res://Resources/Sprites/Entities/Enimies/::1782955010
+enemy sprites.png::CompressedTexture2D::2127488933595435740::1782955010::1782955055::1::::<><><>0<>0<>7537f4103ee1fe3fd0cb3e3bdecaf118<>res://.godot/imported/enemy sprites.png-e740810f78692b8ac5e6c8d8721e362d.ctex::
+::res://Resources/Sprites/Entities/Enimies/Hexagon/::1782955010
+Hexagon.png::CompressedTexture2D::608369137855643737::1782955010::1782955055::1::::<><><>0<>0<>0bd0d4f67ba23680cd0a35421231f765<>res://.godot/imported/Hexagon.png-fff431dc502a209329fd1f86bac86d64.ctex::
+::res://Resources/Sprites/Entities/Enimies/Pentagon/::1782955010
+Pentagon.png::CompressedTexture2D::5033792083506737619::1782955010::1782955055::1::::<><><>0<>0<>f3621c748d66b05ea92bf196268d9a06<>res://.godot/imported/Pentagon.png-c02491172d4abc6172e1013a10c42519.ctex::
+::res://Resources/Sprites/Entities/Enimies/Square/::1782955010
+Square.png::CompressedTexture2D::1487246760639637031::1782955010::1782955055::1::::<><><>0<>0<>ae6227dc249f47c05924e6b5fc14eb3e<>res://.godot/imported/Square.png-bdf388614f06b64b30e2d27defdb91a5.ctex::
+::res://Resources/Sprites/Entities/Player/::1782955010
+PlayerHp.png::CompressedTexture2D::455755757738433776::1782955010::1782955055::1::::<><><>0<>0<>af0191bafa4227f0a8de1b4cc5abc5a2<>res://.godot/imported/PlayerHp.png-3108692c4a7810794eff43febf82eb31.ctex::
+Untitled 1.png::CompressedTexture2D::6387767821454005967::1782955010::1782955055::1::::<><><>0<>0<>9570c7e80a1e9516d8e7e3b7ed75ee03<>res://.godot/imported/Untitled 1.png-b05fe7617b1747283c4baf48bff708ed.ctex::
+::res://Scenes/::1782955011
+::res://Scenes/Entities/::1782955011
+player.gd::GDScript::5805930842250051182::1782955011::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/Levels/::1782955011
+level_1.tscn::PackedScene::1815331502436056047::1782955011::0::1::::<><><>0<>0<><>::uid://coyo3kvaxtosk::::res://Scenes/Entities/player.gd<>uid://bf5phoxj1yg08::::res://PlayerArt.png
+::res://Scripts/::1782955011
+::res://Scripts/Globals/::1782955011
+global.gd::GDScript::847870571866034842::1782955011::0::1::::<>Node<><>0<>0<><>::
