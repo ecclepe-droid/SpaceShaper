@@ -33,4 +33,5 @@ func take_damage():
 			var octagon = ENEMY_OCTAGON.instantiate()
 			$"../../Circles".add_child(octagon)
 			octagon.global_position = self.position
+			Globals.score += 2
 			queue_free()

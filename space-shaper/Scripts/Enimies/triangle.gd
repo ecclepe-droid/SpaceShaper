@@ -22,4 +22,5 @@ func take_damage():
 		print("triangle HP is: ")
 		print(triangle_hp)
 		if (triangle_hp == 0):
+			Globals.score += 12
 			queue_free()

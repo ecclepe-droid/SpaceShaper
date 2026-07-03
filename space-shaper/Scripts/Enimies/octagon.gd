@@ -27,4 +27,5 @@ func take_damage():
 		var hexagon = ENEMY_HEXAGON.instantiate()
 		$"../../Hexagons".add_child(hexagon)
 		hexagon.global_position = self.position
+		Globals.score += 4
 		queue_free()

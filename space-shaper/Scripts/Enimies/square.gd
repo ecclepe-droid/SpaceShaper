@@ -27,4 +27,5 @@ func take_damage():
 		var triangle = ENEMY_TRIANGLE.instantiate()
 		$"../../Squares".add_child(triangle)
 		triangle.global_position = self.position
+		Globals.score += 10
 		queue_free()

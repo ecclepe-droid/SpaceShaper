@@ -27,4 +27,5 @@ func take_damage():
 		var pentagon = ENEMY_PENTAGON.instantiate()
 		$"../../Penagons".add_child(pentagon)
 		pentagon.global_position = self.position
+		Globals.score += 6
 		queue_free()

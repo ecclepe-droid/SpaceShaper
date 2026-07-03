@@ -27,4 +27,5 @@ func take_damage():
 		var square = ENEMY_SQUARE.instantiate()
 		$"../../Squares".add_child(square)
 		square.global_position = self.position
+		Globals.score += 8
 		queue_free()
