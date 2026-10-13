@@ -90,7 +90,6 @@ func take_damage():
 
 	#Automatic reload when running out of shots and use ammo when shooting
 func shoot():
-	shooting_rate -= 0.01
 	if shooting_rate <= 0.12:
 		shooting_rate = 0.12
 		print("shooting efficiancy increased.")
@@ -115,6 +114,5 @@ func _on_reload_timer_timeout() -> void:
 	Globals.clip = Globals.max_clip
 	if Globals.clip < 50:
 		print("clip size increased")
-		Globals.max_clip += 1
 	print("maximum clip size reached.")
 	print(Globals.clip)
