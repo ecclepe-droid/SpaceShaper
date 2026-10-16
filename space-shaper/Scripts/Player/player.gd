@@ -3,8 +3,7 @@ extends CharacterBody2D
 signal player_shoot(player: CharacterBody2D, dir: Vector2)
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
+
 const MAX_MOVE_SPEED = 600
 var shooting_rate = 0.5
 var reload_speed = 5

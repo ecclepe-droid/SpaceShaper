@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://m07j4m7ari2"]
 
+[ext_resource type="Script" uid="uid://cbn84tpdou8bm" path="res://Scripts/Ui/game_user_interface.gd" id="1_22cdt"]
 [ext_resource type="Texture2D" uid="uid://dgykyulg7ju1p" path="res://Resources/Level/starting screen.png" id="1_644p4"]
 
 [node name="GameUserInterface" type="Control" unique_id=363529464]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_22cdt")
 
 [node name="StartGameScreen" type="TextureRect" parent="." unique_id=1558031997]
 layout_mode = 1
@@ -19,30 +21,36 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_644p4")
 
-[node name="MarginContainer" type="MarginContainer" parent="StartGameScreen" unique_id=2033155037]
+[node name="PlayGame" type="Button" parent="." unique_id=1052991845]
+modulate = Color(1, 1, 1, 0.49803922)
 layout_mode = 0
-anchor_left = 0.013888889
-anchor_top = 0.6574074
-anchor_right = 0.23524305
-anchor_bottom = 0.97839504
-theme_override_constants/margin_top = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="StartGameScreen/MarginContainer" unique_id=579698701]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Button" type="Button" parent="StartGameScreen/MarginContainer/VBoxContainer" unique_id=358416856]
-layout_mode = 2
+offset_left = 17.0
+offset_top = 431.0
+offset_right = 267.0
+offset_bottom = 485.0
 text = "
-"
+                                                          "
 
-[node name="Button2" type="Button" parent="StartGameScreen/MarginContainer/VBoxContainer" unique_id=385422901]
-layout_mode = 2
-text = "||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||"
+[node name="Controls" type="Button" parent="." unique_id=1899474684]
+modulate = Color(1, 1, 1, 0.49803922)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 501.0
+offset_right = 267.0
+offset_bottom = 555.0
+text = "
+                                                          "
 
-[node name="Button3" type="Button" parent="StartGameScreen/MarginContainer/VBoxContainer" unique_id=1547512947]
-layout_mode = 2
-text = "||||||||||||||||||||||||||||
-||||||||||||||||||||||||||||"
+[node name="Exit" type="Button" parent="." unique_id=1739711707]
+modulate = Color(1, 1, 1, 0.49803922)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 574.0
+offset_right = 267.0
+offset_bottom = 628.0
+text = "
+                                                          "
+
+[connection signal="pressed" from="PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
