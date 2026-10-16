@@ -19,20 +19,30 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_644p4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="StartGameScreen" unique_id=1349867332]
-layout_mode = 1
-anchors_preset = -1
+[node name="MarginContainer" type="MarginContainer" parent="StartGameScreen" unique_id=2033155037]
+layout_mode = 0
 anchor_left = 0.013888889
 anchor_top = 0.6574074
-anchor_right = 0.23350695
-anchor_bottom = 0.9768519
+anchor_right = 0.23524305
+anchor_bottom = 0.97839504
+theme_override_constants/margin_top = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="StartGameScreen/VBoxContainer" unique_id=358416856]
+[node name="VBoxContainer" type="VBoxContainer" parent="StartGameScreen/MarginContainer" unique_id=579698701]
 layout_mode = 2
+theme_override_constants/separation = 20
 
-[node name="Button2" type="Button" parent="StartGameScreen/VBoxContainer" unique_id=385422901]
+[node name="Button" type="Button" parent="StartGameScreen/MarginContainer/VBoxContainer" unique_id=358416856]
 layout_mode = 2
+text = "
+"
 
-[node name="Button3" type="Button" parent="StartGameScreen/VBoxContainer" unique_id=1547512947]
+[node name="Button2" type="Button" parent="StartGameScreen/MarginContainer/VBoxContainer" unique_id=385422901]
 layout_mode = 2
+text = "||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||"
+
+[node name="Button3" type="Button" parent="StartGameScreen/MarginContainer/VBoxContainer" unique_id=1547512947]
+layout_mode = 2
+text = "||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||"
