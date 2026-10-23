@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://beudk3m4k5ebj" path="res://Scripts/Ui/clip.gd" id="5_e88pc"]
 [ext_resource type="Script" uid="uid://rlqc6b3wete0" path="res://Scripts/Ui/bottom_center.gd" id="5_rmhtn"]
 [ext_resource type="Script" uid="uid://s27ko6oclygn" path="res://Scripts/Ui/ammo.gd" id="6_pljam"]
+[ext_resource type="Script" uid="uid://lyl2y3gjr364" path="res://Scenes/Player/score.gd" id="9_e88pc"]
+[ext_resource type="Texture2D" uid="uid://nuftjia1fw1n" path="res://Resources/Sprites/Big Pause Button.png" id="9_rmhtn"]
 
 [node name="player_ui" type="CanvasLayer" unique_id=258393080]
 
@@ -119,7 +121,7 @@ Aim with the mouse and shoot by left clicking."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TopRight" type="Panel" parent="." unique_id=2082791963]
+[node name="ScorePanel" type="Panel" parent="." unique_id=2082791963]
 anchors_preset = -1
 anchor_left = 0.89400005
 anchor_right = 1.0
@@ -127,7 +129,7 @@ anchor_bottom = 0.037
 offset_left = 0.11193848
 offset_bottom = -0.97599983
 
-[node name="Label" type="Label" parent="TopRight" unique_id=742208647]
+[node name="Score" type="Label" parent="ScorePanel" unique_id=742208647]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -135,3 +137,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Score:  1924512"
+script = ExtResource("9_e88pc")
+
+[node name="PausePanel" type="Panel" parent="." unique_id=832191731]
+anchors_preset = -1
+anchor_left = 0.9244792
+anchor_top = 0.063271604
+anchor_right = 0.9704861
+anchor_bottom = 0.14660494
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseButton" type="Button" parent="PausePanel" unique_id=844946915]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12264151
+anchor_top = 0.12962963
+anchor_right = 0.8773585
+anchor_bottom = 0.8703704
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("9_rmhtn")
+metadata/_edit_use_anchors_ = true

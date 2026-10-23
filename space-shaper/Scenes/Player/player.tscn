@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cve8snc06cfrt" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://dovngjevh4e1n" path="res://Resources/Entities/Player/PlayerArtRevised.png" id="2_a3d8c"]
 [ext_resource type="PackedScene" uid="uid://cci153kh6wxlt" path="res://Scenes/Player/player_ui.tscn" id="3_xpcdj"]
+[ext_resource type="Texture2D" uid="uid://j3tury3yemcf" path="res://Resources/Entities/Projectiles/enemy_bullet.png" id="4_mtuoh"]
 
 [sub_resource type="Animation" id="Animation_xpcdj"]
 resource_name = "damage_fade"
@@ -11,6 +12,26 @@ resource_name = "damage_fade"
 _data = {
 &"damage_fade": SubResource("Animation_xpcdj")
 }
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_htcer"]
+particle_flag_disable_z = true
+angle_min = 198.30002
+angle_max = 244.70001
+spread = 30.0
+initial_velocity_min = 16.14
+initial_velocity_max = 139.79
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = -2.2351742e-06
+radial_accel_min = -2.2351742e-06
+radial_accel_max = -2.2351742e-06
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = -2.2351742e-06
+scale_max = 2.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1878138704]
 script = ExtResource("1_a3d8c")
@@ -47,6 +68,19 @@ one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=854443161]
 libraries/ = SubResource("AnimationLibrary_mtuoh")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=76360940]
+position = Vector2(-195.80737, 9.414673)
+rotation = 3.1415927
+amount = 32
+amount_ratio = 0.8
+texture = ExtResource("4_mtuoh")
+lifetime = 0.5
+speed_scale = 2.0
+randomness = 1.0
+fixed_fps = 20
+visibility_rect = Rect2(-60, -10, 20, 20)
+process_material = SubResource("ParticleProcessMaterial_htcer")
 
 [connection signal="timeout" from="ShootTimer" to="." method="shoot"]
 [connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]

@@ -15,7 +15,7 @@ var max_ammo = 200
 var clip = 5
 var max_clip = 20
 var score = 0
-var pause = 0
+var pause = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
