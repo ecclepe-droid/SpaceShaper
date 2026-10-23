@@ -13,7 +13,7 @@ func _physics_process(delta):
 	if target:
 		direction = position.direction_to(target.position)
 		velocity = direction * MOVE_SPEED
-		var collision = move_and_collide(velocity * delta)
+		var collision = move_and_collide(velocity * delta * Globals.pause)
 		if collision:
 			var body = collision.get_collider()
 			if body.name == "Player":

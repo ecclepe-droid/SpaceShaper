@@ -1,6 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1792106816
-game_user_interface.tscn::PackedScene::26348121370322735::1791933613::0::1::::<><><>0<>0<><>::uid://dgykyulg7ju1p::::res://Resources/Level/starting screen.png
+::res://::1792711531
+game_user_interface.tscn::PackedScene::26348121370322735::1792115288::0::1::::<><><>0<>0<><>::uid://cbn84tpdou8bm::::res://Scripts/Ui/game_user_interface.gd<>uid://dgykyulg7ju1p::::res://Resources/Level/starting screen.png
 icon.svg::CompressedTexture2D::6057612168663482748::1791932139::1791932139::1::::<><><>0<>0<>2fdeff215d10905948b3864b1100e611<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 PlayerArt.png::CompressedTexture2D::2800220261255905739::1791932137::1791932137::1::::<><><>0<>0<>da391ac106e1107261d17effd9446659<>res://.godot/imported/PlayerArt.png-10fbca892c75d97f34992aaf6fada275.ctex::
 ::res://Resources/::1791932137
@@ -33,7 +33,7 @@ Square.png::CompressedTexture2D::1487246760639637031::1791932137::1791932137::1:
 ::res://Resources/Sprites/Entities/Player/::1791932138
 PlayerHp.png::CompressedTexture2D::455755757738433776::1791932138::1791932138::1::::<><><>0<>0<>af0191bafa4227f0a8de1b4cc5abc5a2<>res://.godot/imported/PlayerHp.png-3108692c4a7810794eff43febf82eb31.ctex::
 Untitled 1.png::CompressedTexture2D::6387767821454005967::1791932138::1791932138::1::::<><><>0<>0<>9570c7e80a1e9516d8e7e3b7ed75ee03<>res://.godot/imported/Untitled 1.png-b05fe7617b1747283c4baf48bff708ed.ctex::
-::res://Scenes/::1791932138
+::res://Scenes/::1792109800
 ::res://Scenes/Enimies/::1791932645
 changing_shape.tscn::PackedScene::5419096318616512695::1791932138::0::1::::<><><>0<>0<><>::uid://k1hp7u1j30g::::res://Scripts/Enimies/changing_shape.gd<>uid://dnjeiyhijbajm::::res://Resources/Entities/Enemies/enemy sprites.png
 circle.tscn::PackedScene::2951401322985037821::1791932645::0::1::::<><><>0<>0<><>::uid://b0cwgn7cvo0im::::res://Resources/Entities/Enemies/enemy sprites.png<>uid://b2p0rxaigxjii::::res://Scripts/Enimies/circle.gd
@@ -43,21 +43,18 @@ octagon.tscn::PackedScene::1733405504851963293::1791932645::0::1::::<><><>0<>0<>
 pentagon.tscn::PackedScene::6531414321165118686::1791932645::0::1::::<><><>0<>0<><>::uid://b0pkfudsri1lv::::res://Scripts/Enimies/pentagon.gd<>uid://b0cwgn7cvo0im::::res://Resources/Entities/Enemies/enemy sprites.png
 square.tscn::PackedScene::7089711945432224082::1791932645::0::1::::<><><>0<>0<><>::uid://cv053ntv7g2vw::::res://Scripts/Enimies/square.gd<>uid://b0cwgn7cvo0im::::res://Resources/Entities/Enemies/enemy sprites.png
 triangle.tscn::PackedScene::7985012065757803764::1791932645::0::1::::<><><>0<>0<><>::uid://b0cwgn7cvo0im::::res://Resources/Entities/Enemies/enemy sprites.png<>uid://cl8fcdqfa1wa4::::res://Scripts/Enimies/triangle.gd
-::res://Scenes/Entities/::1791932138
-player.gd::GDScript::5805930842250051182::1791932138::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://Scenes/Levels/::1791932645
+::res://Scenes/Levels/::1792115442
 ammo_crate.tscn::PackedScene::7400864625902649384::1791932138::0::1::::<><><>0<>0<><>::uid://c0vlsd64v86e8::::res://Scripts/Levels/ammo_crate.gd<>uid://cskl8tommqcm3::::res://icon.svg
-level_1.tscn::PackedScene::6752423386595798792::1791932138::0::1::::<><><>0<>0<><>::uid://w7qow5q3ydee::::res://Scripts/Levels/level_1.gd<>uid://drdfrx230w8nc::::res://Scenes/Player/player.tscn
+level_1.tscn::PackedScene::6752423386595798792::1792115442::0::1::::<><><>0<>0<><>::uid://w7qow5q3ydee::::res://Scripts/Levels/level_1.gd<>uid://drdfrx230w8nc::::res://Scenes/Player/player.tscn<>uid://j3tury3yemcf::::res://Resources/Entities/Projectiles/enemy_bullet.png
 loss_screen.tscn::PackedScene::2205678060874533406::1791932645::0::1::::<><><>0<>0<><>::uid://b23sqi6u4cqpy::::res://Scripts/Ui/loss_screen.gd<>uid://dm5dl1evqg3p3::::res://Resources/Level/loss screen.png<>uid://c3ohqwpvfhh2i::::res://Scripts/Ui/quit_button.gd<>uid://dwep0lecttqp6::::res://Scripts/Ui/retry_button.gd
 starting_screen.tscn::PackedScene::6884231835719498621::1791932645::0::1::::<><><>0<>0<><>::uid://dgmn6o6nl7evd::::res://Scripts/Levels/starting_screen.gd<>uid://dgykyulg7ju1p::::res://Resources/Level/starting screen.png
 ::res://Scenes/Objects/::1791932138
 space_debries.tscn::PackedScene::8437500632835973637::1791932138::0::1::::<><><>0<>0<><>::uid://cskl8tommqcm3::::res://icon.svg
-::res://Scenes/Player/::1791932645
+::res://Scenes/Player/::1792108329
 player.tscn::PackedScene::8359000720701524672::1791932645::0::1::::<><><>0<>0<><>::uid://cve8snc06cfrt::::res://Scripts/Player/player.gd<>uid://dovngjevh4e1n::::res://Resources/Entities/Player/PlayerArtRevised.png<>uid://cci153kh6wxlt::::res://Scenes/Player/player_ui.tscn
-player_bullet.tscn::PackedScene::704400191246194768::1791932138::0::1::::<><><>0<>0<><>::uid://bsky5c0i1o5uk::::res://Scripts/Player/player_bullet.gd
+player_bullet.tscn::PackedScene::704400191246194768::1792108328::0::1::::<><><>0<>0<><>::uid://bsky5c0i1o5uk::::res://Scripts/Player/player_bullet.gd<>uid://cyynuq1l76l4k::::res://Resources/Entities/Projectiles/player_bullet.png
 player_ui.tscn::PackedScene::4931367778786034277::1791932645::0::1::::<><><>0<>0<><>::uid://cs5eawh4ek35h::::res://Resources/Entities/Player/PlayerHp.png<>uid://c15x8q3767uto::::res://Scripts/Ui/hp_1.gd<>uid://csb1hsabk7yv2::::res://Scripts/Ui/top_center.gd<>uid://c5kve5mlyb41x::::res://Scripts/Ui/hp_2.gd<>uid://bknhy1x1rcwkl::::res://Scripts/Ui/hp_3.gd<>uid://beudk3m4k5ebj::::res://Scripts/Ui/clip.gd<>uid://rlqc6b3wete0::::res://Scripts/Ui/bottom_center.gd<>uid://s27ko6oclygn::::res://Scripts/Ui/ammo.gd
 ::res://Scripts/::1791932139
-globals.gd::GDScript::3790550393879915928::1791932139::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/Enimies/::1791932138
 changing_shape.gd::GDScript::22235758137693744::1791932138::0::1::::<>CharacterBody2D<><>0<>0<><>::
 circle.gd::GDScript::4314034619955886292::1791932138::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -69,18 +66,20 @@ square.gd::GDScript::6300288752800717788::1791932138::0::1::::<>CharacterBody2D<
 triangle.gd::GDScript::5613350452355318629::1791932138::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Scripts/Globals/::1791932138
 global.gd::GDScript::847870571866034842::1791932138::0::1::::<>Node<><>0<>0<><>::
+globals.gd::GDScript::3790550393879915928::1791932139::0::1::::<>Node<><>0<>0<><>::
 ::res://Scripts/Levels/::1791932138
 ammo_crate.gd::GDScript::6571614629188996957::1791932138::0::1::::<>StaticBody2D<><>0<>0<><>::
 level_1.gd::GDScript::1611212323788723992::1791932138::0::1::::<>Node2D<><>0<>0<><>::
 starting_screen.gd::GDScript::7606013110295692781::1791932138::0::1::::<>Control<><>0<>0<><>::
-::res://Scripts/Player/::1791932609
-player.gd::GDScript::6257101086923260425::1791932609::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scripts/Player/::1792115288
+player.gd::GDScript::6257101086923260425::1792115288::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_bullet.gd::GDScript::3671974572427448186::1791932138::0::1::::<>Area2D<><>0<>0<><>::
-::res://Scripts/Ui/::1791932139
+::res://Scripts/Ui/::1792115288
 ammo.gd::GDScript::1321098970406840497::1791932138::0::1::::<>ProgressBar<><>0<>0<><>::
 bottom_center.gd::GDScript::1216895171683710765::1791932138::0::1::::<>Panel<><>0<>0<><>::
 clip.gd::GDScript::2708665112767405931::1791932138::0::1::::<>ProgressBar<><>0<>0<><>::
 control_desplay.gd::GDScript::3355841453182040655::1791932138::0::1::::<>Label<><>0<>0<><>::
+game_user_interface.gd::GDScript::4871923591883105106::1792115288::0::1::::<>Control<><>0<>0<><>::
 hp_1.gd::GDScript::6661138941754095060::1791932138::0::1::::<>TextureRect<><>0<>0<><>::
 hp_2.gd::GDScript::6900434248861579495::1791932138::0::1::::<>TextureRect<><>0<>0<><>::
 hp_3.gd::GDScript::3115615311221033175::1791932138::0::1::::<>TextureRect<><>0<>0<><>::
