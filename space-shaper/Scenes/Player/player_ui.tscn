@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://s27ko6oclygn" path="res://Scripts/Ui/ammo.gd" id="6_pljam"]
 [ext_resource type="Script" uid="uid://lyl2y3gjr364" path="res://Scenes/Player/score.gd" id="9_e88pc"]
 [ext_resource type="Texture2D" uid="uid://nuftjia1fw1n" path="res://Resources/Sprites/Big Pause Button.png" id="9_rmhtn"]
+[ext_resource type="Script" uid="uid://d0r401r4eyj1m" path="res://Scripts/Ui/pause_button.gd" id="11_pljam"]
 
 [node name="player_ui" type="CanvasLayer" unique_id=258393080]
 
@@ -159,4 +160,5 @@ anchor_bottom = 0.8703704
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("9_rmhtn")
+script = ExtResource("11_pljam")
 metadata/_edit_use_anchors_ = true

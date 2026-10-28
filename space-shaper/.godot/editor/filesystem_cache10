@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1793140563
+::res://::1793216863
 game_user_interface.tscn::PackedScene::26348121370322735::1792115288::0::1::::<><><>0<>0<><>::uid://cbn84tpdou8bm::::res://Scripts/Ui/game_user_interface.gd<>uid://dgykyulg7ju1p::::res://Resources/Level/starting screen.png
 icon.svg::CompressedTexture2D::6057612168663482748::1791932139::1791932139::1::::<><><>0<>0<>2fdeff215d10905948b3864b1100e611<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 PlayerArt.png::CompressedTexture2D::2800220261255905739::1791932137::1791932137::1::::<><><>0<>0<>da391ac106e1107261d17effd9446659<>res://.godot/imported/PlayerArt.png-10fbca892c75d97f34992aaf6fada275.ctex::
@@ -52,10 +52,10 @@ loss_screen.tscn::PackedScene::2205678060874533406::1791932645::0::1::::<><><>0<
 starting_screen.tscn::PackedScene::6884231835719498621::1791932645::0::1::::<><><>0<>0<><>::uid://dgmn6o6nl7evd::::res://Scripts/Levels/starting_screen.gd<>uid://dgykyulg7ju1p::::res://Resources/Level/starting screen.png
 ::res://Scenes/Objects/::1791932138
 space_debries.tscn::PackedScene::8437500632835973637::1791932138::0::1::::<><><>0<>0<><>::uid://cskl8tommqcm3::::res://icon.svg
-::res://Scenes/Player/::1792721877
+::res://Scenes/Player/::1793143187
 player.tscn::PackedScene::8359000720701524672::1792721876::0::1::::<><><>0<>0<><>::uid://cve8snc06cfrt::::res://Scripts/Player/player.gd<>uid://dovngjevh4e1n::::res://Resources/Entities/Player/PlayerArtRevised.png<>uid://cci153kh6wxlt::::res://Scenes/Player/player_ui.tscn<>uid://j3tury3yemcf::::res://Resources/Entities/Projectiles/enemy_bullet.png
 player_bullet.tscn::PackedScene::704400191246194768::1792108328::0::1::::<><><>0<>0<><>::uid://bsky5c0i1o5uk::::res://Scripts/Player/player_bullet.gd<>uid://cyynuq1l76l4k::::res://Resources/Entities/Projectiles/player_bullet.png
-player_ui.tscn::PackedScene::4931367778786034277::1792721471::0::1::::<><><>0<>0<><>::uid://cs5eawh4ek35h::::res://Resources/Entities/Player/PlayerHp.png<>uid://c15x8q3767uto::::res://Scripts/Ui/hp_1.gd<>uid://csb1hsabk7yv2::::res://Scripts/Ui/top_center.gd<>uid://c5kve5mlyb41x::::res://Scripts/Ui/hp_2.gd<>uid://bknhy1x1rcwkl::::res://Scripts/Ui/hp_3.gd<>uid://beudk3m4k5ebj::::res://Scripts/Ui/clip.gd<>uid://rlqc6b3wete0::::res://Scripts/Ui/bottom_center.gd<>uid://s27ko6oclygn::::res://Scripts/Ui/ammo.gd<>uid://lyl2y3gjr364::::res://Scenes/Player/score.gd<>uid://nuftjia1fw1n::::res://Resources/Sprites/Big Pause Button.png
+player_ui.tscn::PackedScene::4931367778786034277::1793143187::0::1::::<><><>0<>0<><>::uid://cs5eawh4ek35h::::res://Resources/Entities/Player/PlayerHp.png<>uid://c15x8q3767uto::::res://Scripts/Ui/hp_1.gd<>uid://csb1hsabk7yv2::::res://Scripts/Ui/top_center.gd<>uid://c5kve5mlyb41x::::res://Scripts/Ui/hp_2.gd<>uid://bknhy1x1rcwkl::::res://Scripts/Ui/hp_3.gd<>uid://beudk3m4k5ebj::::res://Scripts/Ui/clip.gd<>uid://rlqc6b3wete0::::res://Scripts/Ui/bottom_center.gd<>uid://s27ko6oclygn::::res://Scripts/Ui/ammo.gd<>uid://lyl2y3gjr364::::res://Scenes/Player/score.gd<>uid://nuftjia1fw1n::::res://Resources/Sprites/Big Pause Button.png<>uid://d0r401r4eyj1m::::res://Scripts/Ui/pause_button.gd
 score.gd::GDScript::822339753571922435::1792721471::0::1::::<>Label<><>0<>0<><>::
 ::res://Scripts/::1792713718
 ::res://Scripts/Enimies/::1792714491
@@ -73,10 +73,10 @@ globals.gd::GDScript::3790550393879915928::1792718864::0::1::::<>Node<><>0<>0<><
 ammo_crate.gd::GDScript::6571614629188996957::1791932138::0::1::::<>StaticBody2D<><>0<>0<><>::
 level_1.gd::GDScript::1611212323788723992::1791932138::0::1::::<>Node2D<><>0<>0<><>::
 starting_screen.gd::GDScript::7606013110295692781::1791932138::0::1::::<>Control<><>0<>0<><>::
-::res://Scripts/Player/::1792714490
+::res://Scripts/Player/::1793140650
 player.gd::GDScript::6257101086923260425::1792714490::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_bullet.gd::GDScript::3671974572427448186::1791932138::0::1::::<>Area2D<><>0<>0<><>::
-::res://Scripts/Ui/::1792115288
+::res://Scripts/Ui/::1793140650
 ammo.gd::GDScript::1321098970406840497::1791932138::0::1::::<>ProgressBar<><>0<>0<><>::
 bottom_center.gd::GDScript::1216895171683710765::1791932138::0::1::::<>Panel<><>0<>0<><>::
 clip.gd::GDScript::2708665112767405931::1791932138::0::1::::<>ProgressBar<><>0<>0<><>::
@@ -86,7 +86,7 @@ hp_1.gd::GDScript::6661138941754095060::1791932138::0::1::::<>TextureRect<><>0<>
 hp_2.gd::GDScript::6900434248861579495::1791932138::0::1::::<>TextureRect<><>0<>0<><>::
 hp_3.gd::GDScript::3115615311221033175::1791932138::0::1::::<>TextureRect<><>0<>0<><>::
 loss_screen.gd::GDScript::4340443986629221750::1791932138::0::1::::<>Control<><>0<>0<><>::
-quit_button.gd::GDScript::6767485049106668450::1791932139::0::1::::<>Button<><>0<>0<><>::
 pause_button.gd::GDScript::8950884394679684868::1793140640::0::1::::<>Button<><>0<>0<><>::
+quit_button.gd::GDScript::6767485049106668450::1791932139::0::1::::<>Button<><>0<>0<><>::
 retry_button.gd::GDScript::8712630105924470373::1791932139::0::1::::<>Button<><>0<>0<><>::
 top_center.gd::GDScript::6039897018474494725::1791932139::0::1::::<>Panel<><>0<>0<><>::
