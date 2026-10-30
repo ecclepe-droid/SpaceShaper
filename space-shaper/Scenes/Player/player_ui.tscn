@@ -9,7 +9,8 @@
 [ext_resource type="Script" uid="uid://rlqc6b3wete0" path="res://Scripts/Ui/bottom_center.gd" id="5_rmhtn"]
 [ext_resource type="Script" uid="uid://s27ko6oclygn" path="res://Scripts/Ui/ammo.gd" id="6_pljam"]
 [ext_resource type="Script" uid="uid://lyl2y3gjr364" path="res://Scenes/Player/score.gd" id="9_e88pc"]
-[ext_resource type="Texture2D" uid="uid://nuftjia1fw1n" path="res://Resources/Sprites/Big Pause Button.png" id="9_rmhtn"]
+[ext_resource type="Texture2D" uid="uid://nuftjia1fw1n" path="res://Resources/Sprites/Buttons/Big Pause Button.png" id="9_rmhtn"]
+[ext_resource type="Texture2D" uid="uid://cskl8tommqcm3" path="res://icon.svg" id="10_wie2t"]
 [ext_resource type="Script" uid="uid://d0r401r4eyj1m" path="res://Scripts/Ui/pause_button.gd" id="11_pljam"]
 
 [node name="player_ui" type="CanvasLayer" unique_id=258393080]
@@ -140,6 +141,13 @@ grow_vertical = 2
 text = "Score:  1924512"
 script = ExtResource("9_e88pc")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1573196569]
+offset_left = -888.0
+offset_top = -314.0
+offset_right = 1923.0
+offset_bottom = 850.0
+texture = ExtResource("10_wie2t")
+
 [node name="PausePanel" type="Panel" parent="." unique_id=832191731]
 anchors_preset = -1
 anchor_left = 0.9244792
@@ -162,3 +170,5 @@ grow_vertical = 2
 icon = ExtResource("9_rmhtn")
 script = ExtResource("11_pljam")
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="PausePanel/PauseButton" to="PausePanel/PauseButton" method="_on_pressed"]

@@ -22,8 +22,8 @@ var decceleration_speed = 0.
 func _process(_delta):
 	var _direction = Input.get_vector("move_left","move_right","move_forward","move_backward")
 	
-	if Input.is_action_pressed("shoot") and can_shoot==true and Globals.clip>0:
-		print("pew pew")
+	if Input.is_action_pressed("shoot") and can_shoot==true and Globals.clip>0 and Globals.pause == 1:
+		#print("pew pew")
 		$ShootTimer.start(shooting_rate)
 		can_shoot = false
 		
@@ -36,54 +36,58 @@ func _process(_delta):
 		reload_speed -= 0.1
 		if reload_speed <= 2:
 			reload_speed = 2
-			print("reload efficiancy increased")
-		print("maximum reload speed reached")
-		print("reloading now takes")
-		print(reload_speed)
-		print("seconds")
+			#print("reload efficiancy increased")
+		#print("maximum reload speed reached")
+		#print("reloading now takes")
+		#print(reload_speed)
+		#print("seconds")
 		reload()
 		
 	
 
 func get_input():
-	look_at(get_global_mouse_position())
-	var axis = Input.get_axis("move_backward", "move_forward")
-	#print(axis)
-	velocity = Vector2(axis * move_speed, 0).rotated(self.rotation)*acceleration
-	if Input.is_action_pressed("move_forward"):
-		acceleration += acceleration_speed
-		if acceleration > max_acceleration:
-			acceleration = max_acceleration
-	elif Input.is_action_pressed("move_backward"):
-		acceleration -= decceleration_speed/2
-		if acceleration < min_acceleration:
-			acceleration = min_acceleration
-	else:
-		acceleration -= decceleration_speed
-		if acceleration < min_acceleration:
-			acceleration = min_acceleration
+	if Globals.pause == 1:
+		look_at(get_global_mouse_position())
+		var axis = Input.get_axis("move_backward", "move_forward")
+		#print(axis)
+		velocity = Vector2(axis * move_speed, 0).rotated(self.rotation)*acceleration
+		if Input.is_action_pressed("move_forward"):
+			acceleration += acceleration_speed * Globals.pause
+			if acceleration > max_acceleration:
+				acceleration = max_acceleration
+		elif Input.is_action_pressed("move_backward"):
+			acceleration -= decceleration_speed/2 * Globals.pause
+			if acceleration < min_acceleration:
+				acceleration = min_acceleration
+		else:
+			acceleration -= decceleration_speed * Globals.pause
+			if acceleration < min_acceleration:
+				acceleration = min_acceleration
 
 
 func _physics_process(delta):
-	get_input()
-	var collision = move_and_collide(velocity * delta)
-	if collision:
-		var body = collision.get_collider()
-		if (body.name == "Circle" 
-		or body.name == "Octagon" 
-		or body.name == "Hexagon" 
-		or body.name == "Pentagon"
-		or body.name == "Square" 
-		or body.name == "Triangle"):
-			if $InvincibilityTimer.time_left == 0:
-				take_damage()
+	collide(delta)
 
+func collide(delta):
+	if Globals.pause == 1:
+		get_input()
+		var collision = move_and_collide(velocity * delta)
+		if collision:
+			var body = collision.get_collider()
+			if (body.name == "Circle" 
+			or body.name == "Octagon" 
+			or body.name == "Hexagon" 
+			or body.name == "Pentagon"
+			or body.name == "Square" 
+			or body.name == "Triangle"):
+				if $InvincibilityTimer.time_left == 0:
+					take_damage()
 func take_damage():
 	var inv_timer: Timer = $InvincibilityTimer
 	if inv_timer.time_left == 0:
 		inv_timer.start()
 		Globals.player_health -= 1
-		print("your heath is",Globals.player_health)
+		#print("your heath is ",Globals.player_health)
 		if Globals.player_health <= 0:
 			get_tree().quit()
 
@@ -91,27 +95,28 @@ func take_damage():
 func shoot():
 	if shooting_rate <= 0.12:
 		shooting_rate = 0.12
-		print("shooting efficiancy increased.")
-	print("Maximum shooting efficiancy reached.")
-	print("you shooting rate is now")
-	print(shooting_rate)
+		#print("shooting efficiancy increased.")
+	#print("Maximum shooting efficiancy reached.")
+	#print("you shooting rate is now")
+	#print(shooting_rate)
 	if Globals.clip >= 0:
 		can_shoot = true
 		Globals.clip -= 1
-		print("Globals.clip is: ", Globals.clip)
+		#print("Globals.clip is: ", Globals.clip)
 	else:
 		reload()
 
 func reload():
 	Globals.clip = 0
-	print("clip dumped")
-	print("reloading...")
+	#print("clip dumped")
+	#print("reloading...")
 	$ReloadTimer.start(reload_speed);
 
 
 func _on_reload_timer_timeout() -> void:
 	Globals.clip = Globals.max_clip
 	if Globals.clip < 50:
-		print("clip size increased")
-	print("maximum clip size reached.")
-	print(Globals.clip)
+		#print("clip size increased")
+		#print("maximum clip size reached.")
+		#print(Globals.clip)
+		pass

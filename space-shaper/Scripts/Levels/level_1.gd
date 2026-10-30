@@ -21,11 +21,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	print(Globals.score)
-
+	#print(Globals.score)
+	pass
 
 func _on_spawn_triangle_timer_timeout():
-	print("triangle")
+	#print("triangle")
 	var triangle = ENEMY_TRIANGLE.instantiate()
 	$Enimies/Squares.add_child(triangle)
 	triangle.global_position = Vector2(
@@ -34,7 +34,7 @@ func _on_spawn_triangle_timer_timeout():
 	)
 	$SpawnTimers/SpawnTriangleTimer.start(randi_range(1, 3))
 func _on_spawn_square_timer_timeout():
-	print("square")
+	#print("square")
 	var square = ENEMY_SQUARE.instantiate()
 	$Enimies/Triangles.add_child(square)
 	square.global_position = Vector2(
@@ -43,7 +43,7 @@ func _on_spawn_square_timer_timeout():
 	)
 	$SpawnTimers/SpawnSquareTimer.start(randi_range(5, 6))
 func _on_spawn_pentagon_timer_timeout():
-	print("pentagon")
+	#print("pentagon")
 	var pentagon = ENEMY_PENTAGON.instantiate()
 	$Enimies/Penagons.add_child(pentagon)
 	pentagon.global_position = Vector2(
@@ -52,7 +52,7 @@ func _on_spawn_pentagon_timer_timeout():
 	)
 	$SpawnTimers/SpawnPentagonTimer.start(randi_range(6, 8))
 func _on_spawn_hexagon_timer_timeout():
-	print("hexagon")
+	#print("hexagon")
 	var hexagon = ENEMY_HEXAGON.instantiate()
 	$Enimies/Hexagons.add_child(hexagon)
 	hexagon.global_position = Vector2(
@@ -61,7 +61,7 @@ func _on_spawn_hexagon_timer_timeout():
 	)
 	$SpawnTimers/SpawnHexagonTimer.start(randi_range(8, 13))
 func _on_spawn_octagon_timer_timeout():
-	print("octagon")
+	#print("octagon")
 	var octagon = ENEMY_OCTAGON.instantiate()
 	$Enimies/Octagons.add_child(octagon)
 	octagon.global_position = Vector2(
@@ -70,7 +70,7 @@ func _on_spawn_octagon_timer_timeout():
 	)
 	$SpawnTimers/SpawnOctagonTimer.start(randi_range(15, 10))
 func _on_spawn_circle_timer_timeout():
-	print("circle")
+	#print("circle")
 	var circle = ENEMY_CIRCLE.instantiate()
 	$Enimies/Circles.add_child(circle)
 	circle.global_position = Vector2(
@@ -82,7 +82,7 @@ func _on_spawn_circle_timer_timeout():
 
 
 func _on_player_player_shoot(player: CharacterBody2D, dir: Vector2) -> void:
-	print(player, "shoot towards", dir)
+	#print(player, "shoot towards", dir)
 	var bullet = PLAYER_BULLET_SCENE.instantiate()
 	$PlayerProjectiles.add_child(bullet)
 	bullet.global_position = player.global_position

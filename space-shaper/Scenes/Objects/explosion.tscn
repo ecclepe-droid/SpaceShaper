@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bsqhlcpvuejv6"]
+
+[ext_resource type="Texture2D" uid="uid://bjnbr44nbsibi" path="res://Resources/Sprites/Buttons/Particle.png" id="1_iq0ti"]
+[ext_resource type="Script" uid="uid://dvxh6uvfjjm3x" path="res://explosion.gd" id="2_2fxhy"]
+
+[sub_resource type="Curve" id="Curve_nirg8"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="explosion" type="Node2D" unique_id=389718093]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1736394483]
+emitting = false
+amount = 60
+texture = ExtResource("1_iq0ti")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 200.0
+scale_amount_min = 0.6
+scale_amount_curve = SubResource("Curve_nirg8")
+script = ExtResource("2_2fxhy")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=572705384]
+zoom = Vector2(5, 5)

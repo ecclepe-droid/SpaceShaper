@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2o47blm5ig14"
-path="res://.godot/imported/black lines.png-88dc2805d49c1923890d98ae6a39a174.ctex"
+uid="uid://c5vmqmpbakse5"
+path="res://.godot/imported/Big Play Button.png-4afc7d20ca2adbb16f24c44c145357d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Sprites/black lines.png"
-dest_files=["res://.godot/imported/black lines.png-88dc2805d49c1923890d98ae6a39a174.ctex"]
+source_file="res://Resources/Sprites/Buttons/Big Play Button.png"
+dest_files=["res://.godot/imported/Big Play Button.png-4afc7d20ca2adbb16f24c44c145357d1.ctex"]
 
 [params]
 
